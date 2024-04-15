@@ -14,7 +14,7 @@ function MapComponent() {
     <div className="relative w-full h-screen">
       <div className="absolute z-10 h-full w-full bg-gray-300">
         <MapContainer
-          center={[-26.302077, -48.8477]}
+          center={[-26.30209, -48.8477]}
           zoom={13}
           scrollWheelZoom={false}
         >

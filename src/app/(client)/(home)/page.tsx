@@ -1,10 +1,4 @@
-import { Metadata } from "next";
 import dynamic from "next/dynamic";
-
-export const metadata: Metadata = {
-  title: "Encontrar clinica",
-  description: "Encontre a melhor clinica para fazer seu exame em Joinville",
-};
 
 const MapBackground = dynamic(() => import("./components/MapComponent"), {
   ssr: false,
