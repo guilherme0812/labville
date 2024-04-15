@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import Map from "react-map-gl";
 
 export const metadata: Metadata = {
   title: "Encontrar clinica",
