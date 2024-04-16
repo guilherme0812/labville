@@ -47,7 +47,9 @@ function Navbar() {
         <Button variant={"outline"} onClick={toggleTheme}>
           <LuSun />
         </Button>
-        <Button variant={"outline"}>User name</Button>
+        <div className="hidden md:flex">
+          <Button variant={"outline"}>User name</Button>
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,11 @@ import { Toggle } from "@/components/ui/toggle";
 import { useState } from "react";
 import { LuSearch } from "react-icons/lu";
 
-function SearchComponent() {
+export type SearchComponentType = {
+  handleSearch(str: string): void;
+};
+
+function SearchComponent({ handleSearch }: SearchComponentType) {
   const [isSearching, setIsSearching] = useState(false);
   const [date, setDate] = useState<Date | undefined>(new Date());
 
@@ -22,6 +26,11 @@ function SearchComponent() {
           className="focus-visible:ring-0 focus-visible:ring-offset-0 border-0"
           onFocus={() => setIsSearching(true)}
           onBlur={() => setIsSearching(false)}
+          onKeyDown={(event: any) =>
+            event.key == "Enter" &&
+            event.target?.value &&
+            handleSearch(event.target?.value as string)
+          }
         />
       </div>
 
