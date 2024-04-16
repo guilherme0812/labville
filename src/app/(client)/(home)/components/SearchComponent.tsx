@@ -1,5 +1,8 @@
 "use client";
 
+import { DatePickerDemo } from "@/components/ui/DatePicker";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Toggle } from "@/components/ui/toggle";
@@ -8,6 +11,7 @@ import { LuSearch } from "react-icons/lu";
 
 function SearchComponent() {
   const [isSearching, setIsSearching] = useState(false);
+  const [date, setDate] = useState<Date | undefined>(new Date());
 
   return (
     <div>
@@ -26,19 +30,69 @@ function SearchComponent() {
           isSearching ? "max-h-auto py-2" : "max-h-0"
         }`}
       >
-        <RadioGroup defaultValue="comfortable">
-          <div className="flex gap-2">
-            <Toggle className="flex gap-2" size={"sm"}>
-              <RadioGroupItem value="default" id="r1" />
-              <div className="text-sm">Procurar por clinica</div>
-            </Toggle>
-
-            <Toggle className="flex gap-2" size={"sm"}>
-              <RadioGroupItem value="default" id="r1" />
-              <div className="text-sm">Procurar por exame</div>
-            </Toggle>
+        <div className="mb-2">
+          <span className="text-xs">Data do exame:</span>
+          <div>
+            <DatePickerDemo />
           </div>
-        </RadioGroup>
+        </div>
+
+        <div className="mb-2">
+          <span className="text-xs">Buscar por:</span>
+          <RadioGroup defaultValue="r1">
+            <div className="flex gap-2">
+              <Toggle className="flex gap-2" size={"sm"}>
+                <RadioGroupItem value="r1" id="r1" />
+                <div className="text-sm text-left">Clínica</div>
+              </Toggle>
+
+              <Toggle className="flex gap-2" size={"sm"}>
+                <RadioGroupItem value="r2" id="r2" />
+                <div className="text-xs md:text-sm text-left">Exame</div>
+              </Toggle>
+            </div>
+          </RadioGroup>
+        </div>
+        <div className="mb-2">
+          <span className="text-xs">Forma de pagamento:</span>
+          <RadioGroup defaultValue="r1">
+            <div className="flex gap-2">
+              <Toggle className="flex gap-2" size={"sm"}>
+                <RadioGroupItem value="r1" id="r1" />
+                <div className="text-sm text-left">Particular</div>
+              </Toggle>
+
+              <Toggle className="flex gap-2" size={"sm"}>
+                <RadioGroupItem value="r2" id="r2" />
+                <div className="text-xs md:text-sm text-left">Convênio</div>
+              </Toggle>
+              <Toggle className="flex gap-2" size={"sm"}>
+                <RadioGroupItem value="r3" id="r3" />
+                <div className="text-xs md:text-sm text-left">
+                  Cartão de crédito
+                </div>
+              </Toggle>
+            </div>
+          </RadioGroup>
+        </div>
+        <div className="mb-2">
+          <span className="text-xs">Realização do exame:</span>
+          <RadioGroup defaultValue="r1">
+            <div className="flex gap-2">
+              <Toggle className="flex gap-2" size={"sm"}>
+                <RadioGroupItem value="r1" id="r1" />
+                <div className="text-sm text-left">Na clinica</div>
+              </Toggle>
+
+              <Toggle className="flex gap-2" size={"sm"}>
+                <RadioGroupItem value="r2" id="r2" />
+                <div className="text-xs md:text-sm text-left">
+                  Atendimento domiciliar
+                </div>
+              </Toggle>
+            </div>
+          </RadioGroup>
+        </div>
       </div>
     </div>
   );
