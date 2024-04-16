@@ -30,8 +30,10 @@ function Navbar() {
               <Link
                 key={link.link}
                 href={link.link}
-                className={`transition-colors hover:text-foreground/80 text-foreground${
-                  pathname != link.link ? "/75" : ""
+                className={`font-medium transition-colors hover:text-foreground/80 ${
+                  pathname != link.link
+                    ? "text-foreground/60"
+                    : "text-foreground"
                 }`}
               >
                 <li>{link.label}</li>
