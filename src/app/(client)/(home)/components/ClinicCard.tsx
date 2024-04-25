@@ -2,7 +2,15 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { LuMapPin, LuStar } from "react-icons/lu";
 
-function ClinicCard() {
+export type ClicicType = {
+  id: number;
+  name: string;
+  address: string;
+  image: string;
+  stars: number;
+};
+
+function ClinicCard(props: ClicicType) {
   return (
     <div className="px-4 pt-4">
       <div className="h-[150px] w-full relative">
@@ -18,16 +26,16 @@ function ClinicCard() {
       <div>
         <div className="flex gap-2 justify-between mt-2">
           <div>
-            <h3 className="text-base font-bold">Clinica Vila Nova</h3>
+            <h3 className="text-base font-bold">{props.name}</h3>
           </div>
           <div className="flex gap-2 items-center text-muted-foreground">
             <LuStar />
-            <span className="text-sm font-bold ">4,6</span>
+            <span className="text-sm font-bold ">{props.stars}</span>
           </div>
         </div>
         <div className="flex gap-2 items-center text-muted-foreground">
           <LuMapPin />
-          <span className="text-sm">Rua Lorein Ipson, n 800, Vila Nova</span>
+          <span className="text-sm">{props.address}</span>
         </div>
       </div>
 

@@ -1,10 +1,10 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { LuSearch } from "react-icons/lu";
 import SearchComponent from "./components/SearchComponent";
 import { useState } from "react";
 import ClinicCard from "./components/ClinicCard";
+import data from "./mock/clinic.json";
 
 const MapBackground = dynamic(() => import("./components/MapComponent"), {
   ssr: false,
@@ -24,8 +24,9 @@ export default function Home() {
             {filter && (
               <div className="h-[80vh]  bg-white dark:bg-slate-950 rounded  ">
                 <div className="flex flex-col">
-                  <ClinicCard />
-                  <ClinicCard />
+                  {data.map((item, index) => (
+                    <ClinicCard {...item} key={index} />
+                  ))}
                 </div>
               </div>
             )}
