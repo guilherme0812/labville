@@ -1,9 +1,10 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { LuMapPin, LuStar } from "react-icons/lu";
 
 function ClinicCard() {
   return (
-    <div className="p-4">
+    <div className="px-4 pt-4">
       <div className="h-[150px] w-full relative">
         <Image
           src="/clinica.jpg"
@@ -28,6 +29,12 @@ function ClinicCard() {
           <LuMapPin />
           <span className="text-sm">Rua Lorein Ipson, n 800, Vila Nova</span>
         </div>
+      </div>
+
+      <div className="mt-4">
+        <Button size={"sm"} variant={"outline"}>
+          Realizar meu exame aqui
+        </Button>
       </div>
     </div>
   );
