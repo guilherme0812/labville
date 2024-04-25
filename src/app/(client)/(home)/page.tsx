@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import SearchComponent from "./components/SearchComponent";
 import { useState } from "react";
 import ClinicCard from "./components/ClinicCard";
-import data from "./mock/clinic.json";
+import data from "../../../mock/clinic.json";
 
 const MapBackground = dynamic(() => import("./components/MapComponent"), {
   ssr: false,
