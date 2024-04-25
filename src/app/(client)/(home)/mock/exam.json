@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Clinica 1",
+    "address": "Rua Lorein Ipson, n 800, Vila Nova",
+    "stars": 5
+  },
+  {
+    "id": 2,
+    "name": "Clinica 2",
+    "address": "Rua Lorein Ipson, n 800, Vila Nova",
+    "stars": 5
+  }
+]
