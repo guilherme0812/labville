@@ -26,5 +26,19 @@
     "address": "Rua das Hortencias, n 33, São Marcos",
     "image": "/clinica.jpg",
     "stars": 5
+  },
+  {
+    "id": 6,
+    "name": "Clinica 5",
+    "address": "Rua Dr Joao colin, n 31213, America",
+    "image": "/clinica.jpg",
+    "stars": 5
+  },
+  {
+    "id": 6,
+    "name": "Clinica 6",
+    "address": "Rua Monsenhorgercino, n 233, itaum",
+    "image": "/clinica.jpg",
+    "stars": 5
   }
 ]
