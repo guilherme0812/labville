@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "fullname": "pedro",
+    "email": "pedro@gmail.com",
+    "password": "123456",
+    "birth_date": null,
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.vecteezy.com%2Farte-vetorial%2F3715527-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-vetor&psig=AOvVaw2pwW1Y65e-SryBB39m3Xju&ust=17142545",
+    "cpf": "123.000.000-00",
+    "phone": "4799881224"
+  },
+  {
+    "id": 2,
+    "fullname": "Andre",
+    "email": "andre@gmail.com",
+    "password": "88899900",
+    "birth_date": null,
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.vecteezy.com%2Farte-vetorial%2F3715527-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-vetor&psig=AOvVaw2pwW1Y65e-SryBB39m3Xju&ust=17142545",
+    "cpf": "123.111.111-11",
+    "phone": "479908320811"
+  }
+]
